@@ -1,0 +1,2 @@
+-A simple test about jujutsu 
+-Using jj to simplify the process of coding examination
