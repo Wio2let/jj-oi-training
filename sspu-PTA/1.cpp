@@ -6,3 +6,34 @@
 	在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后三位。题目保证计算结果不超过双精度范围。
  */
 
+#include <iostream>
+#include <cstdio>
+#include <iomanip>
+
+using namespace std;
+int main()
+{
+    int a;
+    double b = 1, c = 1, res = 0;
+    bool signal = 0;
+    cin >> a;
+    for(int i = 1; i <= a; i++)
+        {
+            if (signal)
+            {
+                res = res - c;
+                b = b + 3;
+                c = 1 / b;
+                signal = !signal;
+            }
+            else
+            {
+                res = res + c;
+                b = b + 3;
+                c = 1 / b;
+                signal = !signal;
+            }
+        }
+    cout << "sum = " << fixed << setprecision(3) << res << endl;
+    return 0;
+}
