@@ -1,2 +1,7 @@
--A simple test about jujutsu 
--Using jj to simplify the process of coding examination
+- A simple project for learning and practicing Jujutsu (`jj`).
+- Using Jujutsu to simplify the coding examination workflow.
+- **Automatic change description:** After every meaningful file modification, proactively run `jj describe` to write a concise, accurate description of the change. Do not wait for the user to ask.
+- **Automatic push:** After describing each change, proactively push it to the remote repository using `jj git push`. Do not wait for the user to ask.
+- **Verify every operation:** Check the change description, repository status, and push result. Never claim a push succeeded unless the command confirms success.
+- **Preserve existing work:** Before describing or pushing, inspect the current Jujutsu state. Do not accidentally describe an empty change, overwrite unrelated work, or rewrite published history without checking the consequences.
+- **Keep changes organized:** When a modification affects multiple logically independent files or tasks, split the changes into separate changes when appropriate, and describe and push each one accordingly.
