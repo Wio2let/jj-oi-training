@@ -13,6 +13,11 @@ A3 = 存在整数 K 使之可以表示为 3K+2 的所有整数的平均值（精
 
 输出格式：
 在一行中顺序输出 A1、A2、A3的值，其间以 1 个空格分隔。如果某个数字不存在，则对应输出NONE。
+输入样例 1：
+8
+5 8 7 6 9 1 3 10
+输出样例 1：
+9 3 6.5
 */
 #include <iostream>
 #include <string>
@@ -30,6 +35,15 @@ using namespace std;
 using ll = long long;
 using ull = unsigned long long;
 int main() {
-
-    return 0;
+    int N;
+	cin >> N;
+	int x = 0;
+	vector<int> v(N);
+	while(cin >> x){
+		v.push_back(x);	
+	}
+	while (N--){
+		cout << v[N] << ' ';
+	}
+	return 0;
 }
